@@ -1,0 +1,64 @@
+/* Police Apple — San Francisco via la police système Apple.
+   On n'embarque pas les fichiers SF Pro (licence Apple) :
+   -apple-system / BlinkMacSystemFont les utilisent déjà sur iPhone et Mac. */
+
+#af_settings .af-hint {
+    opacity: 0.75;
+    font-size: 0.9em;
+    margin: 4px 0 8px;
+    line-height: 1.35;
+}
+
+#af_settings .af-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+    flex-wrap: wrap;
+}
+
+#af_settings .af-row > label {
+    flex: 1 1 auto;
+}
+
+#af_settings .af-row select.text_pole {
+    width: auto;
+    max-width: 60%;
+    flex: 0 1 auto;
+}
+
+body.af-on {
+    font-family: var(--af-stack, -apple-system, BlinkMacSystemFont, system-ui, sans-serif) !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+body.af-on input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
+body.af-on textarea,
+body.af-on select,
+body.af-on .text_pole,
+body.af-on .mes_text,
+body.af-on .mes_block,
+body.af-on #send_textarea {
+    font-family: inherit !important;
+}
+
+/* Gras : chat uniquement (par défaut) */
+body.af-on.af-bold .mes_text,
+body.af-on.af-bold #send_textarea {
+    font-weight: var(--af-weight, 600) !important;
+}
+
+body.af-on.af-bold .mes_text b,
+body.af-on.af-bold .mes_text strong,
+body.af-on.af-bold .mes_text em {
+    font-weight: var(--af-weight-strong, 800) !important;
+}
+
+/* Gras : toute l'interface */
+body.af-on.af-bold.af-weight-all,
+body.af-on.af-bold.af-weight-all input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+body.af-on.af-bold.af-weight-all textarea,
+body.af-on.af-bold.af-weight-all select,
+body.af-on.af-bold.af-weight-all .text_pole {
+    font-weight: var(--af-weight, 600) !important;
+}
